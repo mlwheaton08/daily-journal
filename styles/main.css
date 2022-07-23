@@ -1,0 +1,91 @@
+body {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 20px;
+    background-image: url("../images/background-notebook2.jpg");
+    background-size: cover;
+    background-position: 0% 20%;
+}
+
+#container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.entryForm {
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+    margin: 180px 0 0 0;
+    padding: 20px 0;
+    background-image: linear-gradient(#b1f7dc, #ffeed0);
+    border-radius: 50px;
+    box-shadow: 0 0 5px black;
+    color: #000000af;
+}
+
+fieldset {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0 auto;
+    border: 0;
+}
+
+fieldset > * {
+    width: 150px;
+    margin: 0 auto;
+}
+
+fieldset:hover {
+    color: #ec7c12;
+    font-style: bold;
+}
+
+label {
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+#newEntry {
+    text-align: center;
+}
+
+#dateAndMood {
+    display: flex;
+    justify-content: space-around;
+    margin: 0 130px;
+}
+
+.text {
+    font-family: 'Quicksand', sans-serif;
+    width: 60%;
+}
+
+.entryForm_journalEntry {
+    height: 200px;
+}
+
+.titleAndEntries {
+    margin: 60px 330px 0 0;
+    width: 600px;
+    font-family: 'Annie Use Your Telescope', cursive;
+}
+
+#dailyJournal {
+    text-align: center;
+    width: 400px;
+    margin: 35px auto 40px;
+    padding: 10px 0;
+    font-size: 70px;
+    color: #111111;
+}
+
+#entries {
+    color: #111111;
+    font-size: 27px;
+    /* border: 1px dotted red; */
+}
+
+.rotate {
+    transform: rotate(-1.8deg);
+}

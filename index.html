@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Journal</title>
+    <!-- MAIN FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+    <!-- JOURNAL FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/main.css">
+</head>
+<body>
+
+    <header></header>
+
+    <main id="container">
+
+            <form class="entryForm">
+                <h2 id="newEntry">New Entry</h2>
+                <div id="dateAndMood">
+                    <fieldset>
+                        <label for="entryDate">Date of entry</label>
+                        <input type="date" name="entryDate" class="entryForm_date">
+                    </fieldset>
+                    <fieldset>
+                        <label for="mood">Mood</label>
+                        <select name="mood" id="mood">
+                            <option value="Excited">Excited</option>
+                            <option value="Happy">Happy</option>
+                            <option value="Determined">Determined</option>
+                            <option value="In the Zone">In the Zone</option>
+                            <option value="Neutral">Neutral</option>
+                            <option value="Overwhelmed">Overwhelmed</option>
+                            <option value="Discouraged">Discouraged</option>
+                            <option value="Frustrated">Frustrated</option>
+                            <option value="Burnt Out">Burnt Out</option>
+                            <option value="Somber">Somber</option>
+                        </select>
+                    </fieldset>
+                </div>
+                <fieldset>
+                    <label for="concepts">Concepts covered</label>
+                    <input type="text" name="concepts" class="entryForm_concepts text">
+                </fieldset>
+                <fieldset>
+                    <label for="journalEntry">Journal entry</label>
+                    <textarea name="journalEntry" class="entryForm_journalEntry text"></textarea>
+                </fieldset>
+            </form>
+
+        <div class="titleAndEntries rotate">
+            <h2 id="dailyJournal">Daily Journal</h2>
+            <article id="entries">Hellllooooo this is a sample journal entry</article>
+        </div>
+
+    </main>
+    
+</body>
+</html>
