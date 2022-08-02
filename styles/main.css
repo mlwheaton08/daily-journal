@@ -4,6 +4,7 @@ body {
     background-image: url("../images/background-notebook2.jpg");
     background-size: cover;
     background-position: 0% 20%;
+    background-repeat: no-repeat;
 }
 
 #container {
@@ -66,21 +67,23 @@ label {
 }
 
 .titleAndEntries {
-    margin: 60px 330px 0 0;
+    margin: 2% 19% 0 0;
     width: 600px;
     font-family: 'Annie Use Your Telescope', cursive;
 }
 
 #dailyJournal {
     text-align: center;
+    text-decoration: underline;
     width: 400px;
-    margin: 35px auto 40px;
+    margin: 8% auto 6%;
     padding: 10px 0;
     font-size: 70px;
     color: #111111;
 }
 
 #entries {
+    margin: 0 0 0 5%;
     color: #111111;
     font-size: 27px;
     /* border: 1px dotted red; */
