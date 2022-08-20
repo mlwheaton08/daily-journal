@@ -3,7 +3,8 @@ body {
     font-size: 20px;
     background-image: url("../images/background-notebook2.jpg");
     background-size: cover;
-    background-position: 0% 20%;
+    background-position: 0px -150px;
+    background-attachment: fixed;
     background-repeat: no-repeat;
 }
 
@@ -12,15 +13,16 @@ body {
     justify-content: space-around;
 }
 
-.entryForm {
+#entryForm {
     display: flex;
     flex-direction: column;
-    width: 35%;
+    width: 630px;
+    height: 530px;
     margin: 180px 0 0 0;
     padding: 20px 0;
     background-image: linear-gradient(#b1f7dc, #ffeed0);
     border-radius: 50px;
-    box-shadow: 0 0 5px black;
+    box-shadow: 1 1 5px rgb(78, 78, 78);
     color: #000000af;
 }
 
@@ -42,6 +44,11 @@ fieldset:hover {
     font-style: bold;
 }
 
+.noBorder {
+    border: none;
+    box-shadow: 1px 1px 2px rgb(184, 184, 184);
+}
+
 label {
     text-align: center;
     margin-bottom: 5px;
@@ -57,36 +64,38 @@ label {
     margin: 0 130px;
 }
 
-.text {
+.textField {
     font-family: 'Quicksand', sans-serif;
     width: 60%;
 }
 
-.entryForm_journalEntry {
+#entryForm_journalEntry {
     height: 200px;
 }
 
-.titleAndEntries {
-    margin: 2% 19% 0 0;
+#titleAndEntries {
+    margin: 20px 315px 0 0;
     width: 600px;
     font-family: 'Annie Use Your Telescope', cursive;
+    /* border: 3px solid red; */
 }
 
 #dailyJournal {
     text-align: center;
     text-decoration: underline;
     width: 400px;
-    margin: 8% auto 6%;
+    margin: 0 auto;
     padding: 10px 0;
     font-size: 70px;
     color: #111111;
+    /* border: 3px solid blue; */
 }
 
 #entries {
-    margin: 0 0 0 5%;
+    margin: 0;
     color: #111111;
     font-size: 27px;
-    /* border: 1px dotted red; */
+    /* border: 3px solid green; */
 }
 
 .rotate {

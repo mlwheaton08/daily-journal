@@ -22,16 +22,16 @@
 
     <main id="container">
 
-            <form class="entryForm">
+            <form id="entryForm">
                 <h2 id="newEntry">New Entry</h2>
                 <div id="dateAndMood">
                     <fieldset>
                         <label for="entryDate">Date of entry</label>
-                        <input type="date" name="entryDate" class="entryForm_date">
+                        <input type="date" name="entryDate" id="entryForm_date" class="noBorder">
                     </fieldset>
                     <fieldset>
                         <label for="mood">Mood</label>
-                        <select name="mood" id="mood">
+                        <select name="mood" id="mood" class="noBorder">
                             <option value="Excited">Excited</option>
                             <option value="Happy">Happy</option>
                             <option value="Determined">Determined</option>
@@ -47,17 +47,17 @@
                 </div>
                 <fieldset>
                     <label for="concepts">Concepts covered</label>
-                    <input type="text" name="concepts" class="entryForm_concepts text">
+                    <input type="text" name="concepts" id="entryForm_concepts" class="textField noBorder">
                 </fieldset>
                 <fieldset>
                     <label for="journalEntry">Journal entry</label>
-                    <textarea name="journalEntry" class="entryForm_journalEntry text"></textarea>
+                    <textarea name="journalEntry" id="entryForm_journalEntry" class="textField noBorder"></textarea>
                 </fieldset>
             </form>
 
-        <div class="titleAndEntries rotate">
+        <div id="titleAndEntries" class="rotate">
             <h2 id="dailyJournal">Daily Journal</h2>
-            <article id="entries">Hellllooooo this is a sample journal entry</article>
+            <article id="entries"></article>
         </div>
 
     </main>
