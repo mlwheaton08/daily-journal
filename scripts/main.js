@@ -1,26 +1,48 @@
 import {getJournalEntries} from './entries.js';
 const entries = getJournalEntries();
 
-let entriesHTML = '';
 
-const returnEntries = (array) => {
-    for (const entry of array) {
-        entriesHTML += `
+const returnEntries1to3 = (array) => {
+    let HTML = '';
+    for (let i = 0; i < 3; i++) {
+        HTML += `
         <p class="entry">
-        <span class="entryNumber">Entry #${entry.id}</span>
-        <span class="date">Date: ${entry.date}</span>
-        <span class="mood">Mood: ${entry.mood}</span>
-        <span class="concespant">Concepts: ${entry.concept}</span>
-        <span class="entryText">Entry: ${entry.entry}</span>
+            <div class="entryNumAndMood">
+                <span class="entryNumber"><b>Entry #${array[i].id}</b></span>
+                <span class="mood">Mood: ${array[i].mood}</span>
+            </div>
+            <div class="dateAndConcept">
+                <span class="date">Date: ${array[i].date}</span>
+                <span class="concept">Concepts: ${array[i].concept}</span>
+            </div>
+            <p class="entryText">Entry: ${array[i].entry}</p>
         </p>`
     }
+    document.getElementById('entries').innerHTML = HTML;
 }
-returnEntries(entries);
 
-document.getElementById('entries').innerHTML = entriesHTML;
+const returnEntries4to6 = (array) => {
+    let HTML = '';
+    for (let i = 3; i < 6; i++) {
+        HTML += `
+        <p class="entry">
+            <div class="entryNumAndMood">
+                <span class="entryNumber"><b>Entry #${array[i].id}</b></span>
+                <span class="mood">Mood: ${array[i].mood}</span>
+            </div>
+            <div class="dateAndConcept">
+                <span class="date">Date: ${array[i].date}</span>
+                <span class="concept">Concepts: ${array[i].concept}</span>
+            </div>
+            <p class="entryText">Entry: ${array[i].entry}</p>
+        </p>`
+    }
+    document.getElementById('entries').innerHTML = HTML;
+}
+
+document.getElementById('backButton').onclick = function() {returnEntries1to3(entries)};
+document.getElementById('forwardButton').onclick = function() {returnEntries4to6(entries)};
 
 
-// maybe do buttons at top right and left of notebook for "entries 1-5" and
-// "entries 6-10" to kind of "turn" pages to nevigate entries, as opposed to
-// the scrolling thing that is proving to be quite difficult.
-// also remember reverse order would be best, so most recent entry is at top
+
+// later add if statement to highlight specific moods with corresponding colors

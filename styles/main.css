@@ -80,6 +80,10 @@ label {
     /* border: 3px solid red; */
 }
 
+#buttonsAndTitle {
+    display: flex;
+}
+
 #dailyJournal {
     text-align: center;
     text-decoration: underline;
@@ -91,11 +95,83 @@ label {
     /* border: 3px solid blue; */
 }
 
+#backButton {
+    height: 80px;
+    width: 100px;
+    margin: auto 0;
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    border-right: 3px solid #919191;
+    border-bottom: 3px solid #919191;
+    border-bottom-right-radius: 50px;
+    font-family: 'Annie Use Your Telescope', cursive;
+    font-size: 35px;
+    color: #686868;
+}
+
+#backButton:hover {
+    background-image: linear-gradient(to left top, #27c2008a, #11111100, #11111100, #11111100);
+    color: #464545;
+    cursor: pointer;
+}
+
+#forwardButton {
+    height: 80px;
+    width: 100px;
+    margin: auto 0;
+    padding: 0 15px;
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    border-left: 3px solid #919191;
+    border-bottom: 3px solid #919191;
+    border-bottom-left-radius: 50px;
+    font-family: 'Annie Use Your Telescope', cursive;
+    font-size: 30px;
+    color: #686868;
+}
+
+#forwardButton:hover {
+    background-image: linear-gradient(to right top, #27c2008a, #11111100, #11111100, #11111100);
+    color: #464545;
+    cursor: pointer;
+}
+
 #entries {
     margin: 0;
     color: #111111;
     font-size: 27px;
     /* border: 3px solid green; */
+}
+
+.entry {
+    margin-bottom: 40px;
+}
+
+.entryNumAndMood {
+    display: flex;
+    justify-content: space-between;
+}
+
+.dateAndConcept {
+    display: flex;
+    justify-content: space-between;
+}
+
+.date {
+    text-align: right;
+}
+
+.mood {
+    color: rgb(151, 100, 5);
+}
+
+.concept {
+    color: rgb(172, 53, 16);
+}
+
+.entryText {
+    text-indent: 50px;
+    margin-top: 0;
 }
 
 .rotate {
