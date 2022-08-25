@@ -1,80 +1,80 @@
 const entries = [
     {
         id: 1,
-        date: "07/06/2025",
+        date: new Date("2025-07-06"),
         concept: "Flexbox",
         entry: "I tried to have an element in my Flexbox layout also be another Flexbox layout. It hurt my brain. I hate Steve.",
         mood: "Sad"
     },
     {
         id: 2,
-        date: "07/11/2025",
+        date: new Date("2025-07-11"),
         concept: "HTML",
         entry: "HTML is easy. I'm so dang good at it omg omg.",
         mood: "Happy"
     },
     {
         id: 3,
-        date: "07/14/2025",
+        date: new Date("2025-07-14"),
         concept: "CSS",
         entry: "CSS can be fun sometimes! Today was one of those times.",
         mood: "Sad"
     },
     {
         id: 4,
-        date: "08/16/2025",
+        date: new Date("2025-08-16"),
         concept: "Javascript",
         entry: "Brain hurt. What is function? What is array?",
         mood: "Neutral"
     },
     {
         id: 5,
-        date: "08/26/2025",
+        date: new Date("2025-08-26"),
         concept: "Javascript",
         entry: "Getting better but brain still hurt.",
         mood: "Neutral"
     },
     {
         id: 6,
-        date: "08/28/2025",
+        date: new Date("2025-08-28"),
         concept: "Javascript",
         entry: "I'm learning! I solved something! I can iterate! I can do it!",
         mood: "Motivated"
     },
     {
         id: 7,
-        date: "08/30/2025",
+        date: new Date("2025-08-30"),
         concept: "Javascript",
         entry: "Got stuck today. Javascript hurts me sometimes.",
         mood: "Meh"
     },
     {
-        id: 7,
-        date: "08/30/2025",
+        id: 8,
+        date: new Date("2025-08-30"),
         concept: "Javascript",
         entry: "Got stuck today. Javascript hurts me sometimes.",
         mood: "Meh"
     },
     {
-        id: 7,
-        date: "08/30/2025",
+        id: 9,
+        date: new Date("2025-08-30"),
         concept: "Javascript",
         entry: "Got stuck today. Javascript hurts me sometimes.",
         mood: "Meh"
     },
     {
-        id: 7,
-        date: "08/30/2025",
+        id: 10,
+        date: new Date("2025-08-30"),
         concept: "Javascript",
         entry: "Got stuck today. Javascript hurts me sometimes.",
         mood: "Meh"
     },
     {
-        id: 7,
-        date: "08/30/2025",
-        concept: "Javascript",
-        entry: "Got stuck today. Javascript hurts me sometimes.",
-        mood: "Meh"
+        id: 11,
+        date: new Date("2025-08-30"),
+        concept: "COOONNNCEEPPPPTTTT",
+        entry: "hELLO WORRLLLSSDDDD",
+        mood: "Good"
     }
 ]
 
@@ -83,5 +83,3 @@ export const getJournalEntries = () => {
     const copyOfEntries = entries.map(entry => ({...entry}));
     return copyOfEntries;
 }
-
-console.log(getJournalEntries())
