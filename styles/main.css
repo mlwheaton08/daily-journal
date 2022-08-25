@@ -71,6 +71,7 @@ label {
 
 #entryForm_journalEntry {
     height: 200px;
+    resize: none;
 }
 
 #titleAndEntries {
