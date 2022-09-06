@@ -17,7 +17,7 @@ body {
     display: flex;
     flex-direction: column;
     width: 630px;
-    height: 530px;
+    height: 570px;
     margin: 180px 0 0 0;
     padding: 20px 0;
     background-image: linear-gradient(#b1f7dc, #ffeed0);
@@ -74,6 +74,28 @@ label {
     resize: none;
 }
 
+#submitButton {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1em;
+    color: #000000af;
+    background-color: rgb(255, 228, 155);
+    width: none;
+    padding: 5px 8px 5px 25px;
+    margin: 20px auto;
+    border-radius: 5px;
+    transition: 0.3s background-color;
+}
+
+#submitButton:hover {
+    background-color: rgb(247, 255, 129);
+    cursor: pointer;
+}
+
+#submitButton:active {
+    box-shadow: inset 1px 1px 2px rgb(83, 83, 83);
+    padding: 6px 8px 5px 26px;
+}
+
 #titleAndEntries {
     margin: 20px 315px 0 0;
     width: 600px;
@@ -97,44 +119,39 @@ label {
 }
 
 #backButton {
-    height: 80px;
-    width: 100px;
-    margin: auto 0;
-    background-color: rgba(255, 255, 255, 0);
+    background-color: transparent;
     border: none;
-    border-right: 3px solid #919191;
-    border-bottom: 3px solid #919191;
-    border-bottom-right-radius: 50px;
-    font-family: 'Annie Use Your Telescope', cursive;
-    font-size: 35px;
-    color: #686868;
 }
 
 #backButton:hover {
-    background-image: linear-gradient(to left top, #27c2008a, #11111100, #11111100, #11111100);
-    color: #464545;
     cursor: pointer;
 }
 
 #forwardButton {
-    height: 80px;
-    width: 100px;
-    margin: auto 0;
-    padding: 0 15px;
-    background-color: rgba(255, 255, 255, 0);
+    background-color: transparent;
     border: none;
-    border-left: 3px solid #919191;
-    border-bottom: 3px solid #919191;
-    border-bottom-left-radius: 50px;
-    font-family: 'Annie Use Your Telescope', cursive;
-    font-size: 30px;
-    color: #686868;
 }
 
 #forwardButton:hover {
-    background-image: linear-gradient(to right top, #27c2008a, #11111100, #11111100, #11111100);
-    color: #464545;
     cursor: pointer;
+}
+
+.pageButtonImg {
+    width: 72px;
+    height: 30px;
+    opacity: 15%;
+}
+
+.back {
+    transform: rotate(200deg);
+}
+
+.forward {
+    -moz-transform: scale(1, -1);
+    -webkit-transform: scale(1, -1);
+    -o-transform: scale(1, -1);
+    -ms-transform: scale(1, -1);
+    transform: scale(1, -1) rotate(20deg);
 }
 
 #entries {
