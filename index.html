@@ -53,13 +53,14 @@
                     <label for="journalEntry">Journal entry</label>
                     <textarea name="journalEntry" id="entryForm_journalEntry" class="textField noBorder"></textarea>
                 </fieldset>
+                <button id="submitButton" class="noBorder" type="button">Submit ✏️</button>
             </form>
 
         <div id="titleAndEntries" class="rotate">
             <div id="buttonsAndTitle">
-                <button id="backButton" onclick="pageBack()">Back</button>
+                <button id="backButton"><img class="pageButtonImg back" src="./images/arrow.png"></button>
                 <h2 id="dailyJournal">Daily Journal</h2>
-                <button id="forwardButton" onclick="pageForward()">Forward</button>
+                <button id="forwardButton"><img class="pageButtonImg forward" src="./images/arrow.png"></button>
             </div>
             <article id="entries"></article>
         </div>
