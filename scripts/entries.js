@@ -1,29 +1,43 @@
-import { getEntries } from "./dataAccess.js";
+import { deleteEntry, getEntries } from "./dataAccess.js";
 
 export const displayAllEntries = () => {
     const entries = getEntries();
     let HTML = '';
     for (const entry of entries) {
+        let entryDate= new Date(entry.date)
         HTML += `
-        <p class="entry">
+            <p class="entry">
                 <div class="entryNumAndMood">
-                <span class="entryNumber"><b>Entry #${entry.id}</b></span>
-                <span class="mood">Mood: ${entry.mood}</span>
+                    <span class="entryNumber"><b>Entry #${entry.id}</b></span>
+                    <span class="entryDelete" id="entryDelete--${entry.id}">🗑️</span>
+                    <span class="mood">Mood: ${entry.mood}</span>
                 </div>
                 <div class="dateAndConcept">
-                <span class="date">${entry.date.toLocaleString("en-US", {
-                    weekday: "short",
-                        month: "short",
-                        day: "numeric",
-                        year: "numeric"})
-                    }</span>
+                    <span class="date">
+                        ${
+                            entryDate.toLocaleString("en-US", {
+                                weekday: "short",
+                                month: "short",
+                                day: "numeric",
+                                year: "numeric"})
+                        }
+                    </span>
                     <span class="concept">Concepts: ${entry.concept}</span>
                 </div>
-                <p class="entryText">Entry: ${entry.entry}</p>
-            </p>`
+                <div class="entryText">${entry.entry}</div>
+            </p>
+        `
     }
     document.getElementById('entries').innerHTML = HTML;
 }
+
+// DELETE ENTRY
+document.addEventListener('click', (e) => {
+    if (e.target.id.startsWith('entryDelete--')) {
+        const [, entryId] = e.target.id.split('--');
+        deleteEntry(parseInt(entryId));
+    }
+})
 
 // const getLatestIndex = () => {
     //     const entries = getJournalEntries()

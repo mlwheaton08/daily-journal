@@ -28,3 +28,8 @@ export const sendNewEntry = async (newEntry) => {
     document.dispatchEvent(new CustomEvent("stateChanged"));
     return responseJson;
 }
+
+export const deleteEntry = async (id) => {
+    await fetch(`${API}/entries/${id}`, {method: "DELETE"});
+    document.dispatchEvent(new CustomEvent("stateChanged"));
+}

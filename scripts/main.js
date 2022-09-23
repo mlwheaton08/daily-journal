@@ -19,6 +19,13 @@ document.addEventListener("stateChanged", (e) => {
 // in database, eventually make mood its own object, bc there are limted options and it would make filtering easier
 // also maybe do this with concepts? Although would probably need option to 'add new concept', and then select from dropdown
 
+// for each entry, probably only make delete button visible when hovering over "Entry #" (might need to be a js function bc will be hovering over different item)
+// also maybe make a lil popup (not annoying) that asks if you're sure you want to delete the entry
+
+// from bonus exercise: "- Add an edit button to each Journal Entry.  On clicking this button, a form with the current values populated should be displayed
+// There should be a save button displayed that updates the entry when clicked and displays the edited values
+// Optional to reuse the form you already have"
+
 // Jeremy brought up a good point about date. it might be nice to get rid of date selection and instead
 // have current date added to object (maybe option to change the date after submitting entry if it seems necessary)
 
