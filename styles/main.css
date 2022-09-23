@@ -17,7 +17,7 @@ body {
     display: flex;
     flex-direction: column;
     width: 630px;
-    height: 570px;
+    height: 520px;
     margin: 180px 0 0 0;
     padding: 20px 0;
     background-image: linear-gradient(#b1f7dc, #ffeed0);
@@ -58,10 +58,18 @@ label {
     text-align: center;
 }
 
-#dateAndMood {
+#moodAndConcepts {
     display: flex;
     justify-content: space-around;
     margin: 0 130px;
+}
+
+#mood {
+    width: 110px;
+}
+
+#conceptsField > * {
+    width: 200px;
 }
 
 .textField {
@@ -170,9 +178,28 @@ label {
     justify-content: space-between;
 }
 
+.entryNumber {
+    font-style: bold;
+}
+
+.entryDelete {
+    opacity: 0;
+    transform: scale(0.8);
+    margin-left: 5px;
+    transition: opacity 0.3s;
+}
+
+.entryDelete:hover {
+    opacity: 100%;
+    cursor: pointer;
+}
+
 .dateAndConcept {
     display: flex;
     justify-content: space-between;
+    border-bottom: 1px solid rgb(161, 161, 161);
+    padding-bottom: 10px;
+    margin-bottom: 10px;
 }
 
 .date {
@@ -180,6 +207,8 @@ label {
 }
 
 .mood {
+    flex-grow: 2;
+    text-align: right;
     color: rgb(151, 100, 5);
 }
 
@@ -190,6 +219,8 @@ label {
 .entryText {
     text-indent: 50px;
     margin-top: 0;
+    word-wrap: break-word;
+    font-size: 22px;
 }
 
 .rotate {
