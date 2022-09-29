@@ -144,17 +144,29 @@ label {
     cursor: pointer;
 }
 
+button {
+    border: none;
+    background-color: #ffffff00;
+}
+
 .pageButtonImg {
     width: 72px;
     height: 30px;
     opacity: 15%;
 }
 
+.pageButtonGone {
+    width: 85px;
+    height: 30px;
+}
+
 .back {
+    margin-top: 40px;
     transform: rotate(200deg);
 }
 
 .forward {
+    margin-top: 40px;
     -moz-transform: scale(1, -1);
     -webkit-transform: scale(1, -1);
     -o-transform: scale(1, -1);
