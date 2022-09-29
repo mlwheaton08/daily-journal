@@ -1,23 +1,57 @@
-import { fetchEntries } from './dataAccess.js';
-import { displayAllEntries } from './entries.js';
+import { fetchEntries, getLatestPage, pageBack, pageForward, getButtonState } from './dataAccess.js';
+import { displayEntries } from './entries.js';
 import { displayForm } from './form.js';
 
-const render = async () => {
-    await fetchEntries();
-    displayForm();
-    displayAllEntries();
+const renderAll = async () => {
+  await getLatestPage();
+  await fetchEntries();
+  displayForm();
+  displayEntries();
+  let buttonState = getButtonState();
+  if (buttonState === 'first page') {
+    document.getElementById('backButtonContainer').innerHTML = '<div class="pageButtonGone"></div>';
+  } else if (buttonState === 'last page') {
+    document.getElementById('forwardButtonContainer').innerHTML = '<div class="pageButtonGone"></div>';
+  }
 }
 
-render();
+renderAll();
+
+const renderEntries = async () => {
+  await fetchEntries();
+  displayEntries();
+  let buttonState = getButtonState();
+  if (buttonState === 'first page') {
+    document.getElementById('backButtonContainer').innerHTML = '<div class="pageButtonGone"></div>';
+  } else if (buttonState === 'last page') {
+    document.getElementById('forwardButtonContainer').innerHTML = '<div class="pageButtonGone"></div>';
+  }
+}
 
 document.addEventListener("stateChanged", (e) => {
-    render();
-  })
+  renderAll();
+})
+
+// PAGE BACK BUTTON
+document.addEventListener('click', (e) => {
+  if (e.target.id === 'backButton') {
+    pageBack();
+    renderEntries();
+  }
+})
+
+// PAGE FORWARD BUTTON
+document.addEventListener('click', (e) => {
+  if (e.target.id === 'forwardButton') {
+    pageForward();
+    renderEntries();
+  }
+})
 
 
 
 // in database, eventually make mood its own object, bc there are limted options and it would make filtering easier
-// also maybe do this with concepts? Although would probably need option to 'add new concept', and then select from dropdown
+// also maybe do this with concepts? Although would probably need option to 'add new concept', and then have each option with a checkbox
 
 // for each entry, probably only make delete button visible when hovering over "Entry #" (might need to be a js function bc will be hovering over different item)
 // also maybe make a lil popup (not annoying) that asks if you're sure you want to delete the entry
